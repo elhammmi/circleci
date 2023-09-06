@@ -2,14 +2,11 @@ version: 2.1
 jobs:
   run_and_test:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:14
     steps:
       - checkout
       - run: npm install
-      - run:
-          command: npm test
-          name: Run tests
-      
+      - run: npm test
       - persist_to_workspace:
           root: ~/project
           paths:
