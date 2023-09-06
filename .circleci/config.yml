@@ -11,9 +11,9 @@ jobs:
           name: Run tests
       
       - persist_to_workspace:
-          root: ~/
+          root: ~/project
           paths:
-            - .
+            - node_modules
 
 workflows:
   test_my_app:
