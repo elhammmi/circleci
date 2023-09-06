@@ -17,6 +17,5 @@ jobs:
 workflows:
   test_my_app:
     jobs:
-      - run_and_test
-          context:
-            - test
+      - run_and_test:
+          context: test
