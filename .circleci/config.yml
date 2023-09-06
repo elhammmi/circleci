@@ -8,6 +8,7 @@ jobs:
           MY_ENV_VAR_2: my-value-2
     steps:
       - checkout
+      - run: echo "My environment variable value is:" $MY_ENV_VAR
       - run: npm install
       - run: npm test
       - persist_to_workspace:
